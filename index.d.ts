@@ -489,6 +489,8 @@ declare namespace mapboxgl {
 
         touchZoomRotate: TouchZoomRotateHandler;
 
+        tapDragZoom: TapDragZoomHandler;
+
         touchPitch: TouchPitchHandler;
     }
 
@@ -851,6 +853,18 @@ declare namespace mapboxgl {
         disableRotation(): void;
 
         enableRotation(): void;
+    }
+
+    export class TapDragZoomHandler {
+        constructor(map: mapboxgl.Map);
+
+        enable(): void;
+
+        isActive(): boolean;
+
+        isEnabled(): boolean;
+
+        disable(): void;
     }
 
     export class TouchPitchHandler {
